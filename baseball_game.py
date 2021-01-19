@@ -260,10 +260,10 @@ def is_no(one_more_input):
 
 def main():
     print("Play Baseball")
+    random_number = str(get_not_duplicated_three_digit_number())
+    print("Random Number is : ", random_number)
     # ===Modify codes below=============
     while True:
-        random_number = str(get_not_duplicated_three_digit_number())
-        print("Random Number is : ", random_number)
         user_input = input('Input guess number : ')
         if user_input == '0':
             break
@@ -283,8 +283,12 @@ def main():
                         break
                     else:
                         print('Wrong Input, Input again')
+
                 if go_flag == True:
                     break
+                else:
+                    random_number = str(get_not_duplicated_three_digit_number())
+                    print("Random Number is : ", random_number)
     # ==================================
     print("Thank you for using this program")
     print("End of the Game")
