@@ -265,7 +265,9 @@ def main():
         random_number = str(get_not_duplicated_three_digit_number())
         print("Random Number is : ", random_number)
         user_input = input('Input guess number : ')
-        if not is_validated_number(user_input):
+        if user_input == '0':
+            break
+        elif not is_validated_number(user_input):
             print('Wrong Input, Input again')
         else:
             result = get_strikes_or_ball(user_input, random_number)
