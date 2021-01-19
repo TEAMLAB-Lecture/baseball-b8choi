@@ -272,14 +272,18 @@ def main():
             result = get_strikes_or_ball(user_input, random_number)
             print('Strikes :', result[0], 'Balls :', result[1])
             if result[0] == 3:
+                go_flag = False
                 while True:
                     answer = input('You win, one more?(Y/N) ?')
                     if is_yes(answer):
                         break
                     elif is_no(answer):
-                        return
+                        go_flag = True
+                        break
                     else:
                         print('Wrong Input, Input again')
+                if go_flag == True:
+                    break
     # ==================================
     print("Thank you for using this program")
     print("End of the Game")
